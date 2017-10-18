@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <link rel="stylesheet" href="default.css">
+    <!-- V -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.css"> -->
+
+    <script src="https://use.fontawesome.com/2755c231b3.js"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <!--everything on the page-->
+      <div class="row">
+        <header>
+          <div class="sidebar">
+            <div class="logo">ZipCode</div>
+            <nav>
+              <a href="/login" class="nav-item">Login</a>
+              <a href="/feed" class="nav-item">Feed</a>
+              <a href="/signup" class="nav-item active">Sign up</a>
+              <a href="" class="nav-item">Posts</a>
+            </nav>
+          </div>
+        </header>
+      </div>
+      <% if flash[:message] %>
+      <div id="notice"><%= flash[:message] %></div>
+      <% end %>
+
+      <%= yield %>
+
+      <!-- FOOTER/BOTTOM -->
+      <div class="row">
+        <footer>
+          <div>
+            <p id="footer_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+          <!--closing column 3-->
+        </footer>
+      </div>
+      <!--closing row 7-->
+      <div class="row">
+        <div class="last"></div>
+      </div>
+      <!--closing row 8-->
+    </div>
+    <!--closing container div-->
+  </body>
+
+</html>

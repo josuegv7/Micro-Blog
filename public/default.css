@@ -1,0 +1,468 @@
+/*FEED CSS*/
+body {
+  background: #F9F8F8;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*FLASH MESSAGE*/
+#notice {
+  text-align: center;
+	background-color: rgba(30,30,200,0.8);
+	color: #fff;
+	font-weight: bold;
+	padding: 15px 50px;
+}
+
+/*END FALSH MESSAGE*/
+
+/*Navigation===================*/
+.sidebar {
+  background: #031926;
+  flex: 1 3 20%;
+  min-width: 300px;
+  padding: 4em;
+}
+.logo {
+  text-transform: uppercase;
+  margin-bottom: 2em;
+  color: #F9F8F8;
+  @media (min-width: 1500px) {
+    margin-bottom: 5em;
+  }
+  span {
+    font-weight: 700;
+  }
+}
+.nav-item {
+  color: #F9F8F8;
+  text-decoration: none;
+  font-size: 1.7rem;
+  display: inline-block;
+  margin-right: 2em;
+  @media (min-width: 1500px) {
+    display: block;
+    margin: 7vh 0;
+  }
+  &.active {
+    color: #F9F8F8;
+  }
+}
+/*Navigation End*/
+
+
+/*LOGIN CSS*/
+.login-container{
+	width: 500px;
+	height: 400px;
+	text-align: center;
+	background-color: rgba(52, 73, 94,0.6);
+	border-radius: 4px;
+	margin: 0 auto;
+	margin-top: 70px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.login-container img{
+	width: 120px;
+	height: 140px;
+	margin-top: -60px;
+	margin-bottom: 30px;
+	border-radius: 50%;
+}
+.login-container input[type="text"], .login-container input[type="password"]{
+	height: 55px;
+	width: 200px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	border: none;
+	margin-bottom: 20px;
+	background-color: #fff;
+	padding-top: 0px;
+	padding-left: 30px;
+	text-align: center;
+}
+.login-form-input::before{
+	content: "\f007";
+	position: absolute;
+	font-family: "FontAwesome";
+  padding-left: 30px;
+	color: black;
+	padding-top: 9px;
+	font-size: 30px;
+}
+.login-form-input:nth-child(2)::before{
+	content: "\f023";
+}
+.btn-login{
+	padding: 15px, 30px;
+	cursor: pointer;
+	color: #fff;
+	border-radius: 40px;
+	border: none;
+	background-color: #2ECC71;
+	height: 60px;
+	width: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 25px;
+	margin-bottom: 15px;
+}
+a {
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+}
+#login-social-media-icons {
+ margin: auto;
+ width: 15%;
+ text-align: center;
+ }
+
+/*Zip Code Header is .login-h1*/
+.login-h1{
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	color: black;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	top: 0;
+}
+/* Login-h2 is blurb about everything the sight encompasses*/
+.login-h2{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	color: black;
+}
+
+/*-------------------FEED CSS-------------------------------*/
+/* Setting up our grid */
+/*Text in posts*/
+span{
+  margin: auto;
+  text-align: center;
+  bottom: 0;
+  font-size: 1.5em;
+  position: relative;
+}
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.seven:first-child, .eight:first-child, .nine:first-child, .ten:first-child, .eleven:first-child, .five:first-child, .four:first-child, .three:first-child, .two:first-child, .one:first-child, .six:first-child {
+  margin-left: 0;
+}
+
+
+/*HERO IMAGE  Row 2*/
+.hero-image {
+  width: 100%;
+  height: 200px;
+  background:#919992;
+  margin: auto;
+  margin-top: 10px;
+}
+.hero-image-background {
+  margin: auto;
+  text-align: center;
+  top: 50%;
+  font-size: 4.5em;
+  position: relative;
+}
+/*-----------Close Hero Image----------*/
+.six {
+  width: 49%;
+  /* This div spans six columns (the entire row)*/
+  float: left;
+  margin-left: 2%;
+}
+.five {
+  width: 40.5%;
+  /* This div spans five columns */
+  margin-left: 2%;
+  float: left;
+}
+.four {
+  width: 32%;
+  float: left;
+  margin-left: 2%;
+}
+
+.three {
+  width: 23.5%;
+  float: left;
+  margin-left: 2%;
+}
+.two {
+  width: 15%;
+  float: left;
+  margin-left: 2%;
+}
+
+.one {
+  width: 6.5%;
+  float: left;
+  margin-left: 2%;
+}
+.row {
+  width: 100%;
+  clear: both;
+  Clear creates new styles for the next row
+  padding: 0px;
+  margin: 0px;
+}
+
+/*Open Row 3 (6,3,3 )--------------------------*/
+.row3 .six, .row3 .three {
+  height: 333px;
+  background-color: #F89406;
+}
+/*6 left*/
+.row3 .left {
+  background: url('https://images.pexels.com/photos/7375/startup-photos.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb') no-repeat center center ;
+  background-size: cover;
+}
+/*3 middle*/
+.row3 .middle {
+  background: #728779;
+}
+/*3 right*/
+.row3 .right {
+  background: url('https://images.pexels.com/photos/249798/pexels-photo-249798.png?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb') no-repeat center center ;
+  background-size: cover;
+}
+/*Closing Row 3 (6,3,3 )----------------------------*/
+
+/* Open Row 4(3,6,3)---------------*/
+.row4 .six, .row4 .three {
+  height: 333px;
+  background-color: #F9690E;
+}
+/*3 left*/
+.row4 .left {
+  background: #728779;
+}
+/*6 middle*/
+.row4 .middle {
+  background: url('https://images.pexels.com/photos/36990/pexels-photo.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb') no-repeat center center ;
+  background-size: cover;
+}
+/*3 right*/
+.row4 .right {
+  background: #728779;
+}
+/*------------------------ Closing Row 4 (3,6,3)---------------*/
+
+
+/* -----------------------Open  Row 5 (3,3,3, 3)---------------*/
+.row5 .six, .row5 .three {
+  height: 333px;
+  background-color: #FDE3A7;
+}
+/*3 left*/
+.row5 .left {
+  background: #728779;
+}
+/*3 middle1*/
+
+.row5 .middle1 {
+  background: url('https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb') no-repeat center center ;
+  background-size: cover;
+}
+/*3 middle2*/
+.row5 .middle2 {
+  background: url('https://static.pexels.com/photos/398077/pexels-photo-398077.jpeg') no-repeat center center ;
+  background-size: cover;
+}
+/*3 right*/
+.row5 .right {
+  background: #728779;
+}
+/*------------------------ Close Row 5(3,3,3, 3)---------------*/
+
+/*-------------------Open Row 6 row-------------------------*/
+
+.row6 .six, .row6 .three {
+  height: 333px;
+  background-color: #728779;
+}
+
+.row6 .left {
+  background: #728779;
+}
+
+.row6 .middle {
+  background: #728779;
+}
+
+.row6 .right {
+  background: url('https://images.pexels.com/photos/7375/startup-photos.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb') no-repeat center center;
+  background-size: cover;
+}
+
+/*-------------------Close Row 6 row--------------------------*/
+
+
+.row3, .row4, .row5, .row6 {
+  padding-top: 30px;
+}
+
+/*-------------------FEED CSS CLOSING----------------------------*/
+
+
+/*---------------------SIGN UP CSS-------------------------------*/
+.createaccount{
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  width: 45%;
+  height: 350px;
+  padding: 50px;
+  text-align: center;
+  background:#919992;
+  opacity: .8;
+  border-radius: 10px;
+}
+
+.createaccount label{
+  text-align: left;
+  font-size: 1em;
+  padding: 10px;
+}
+.createaccount input{
+  width: 30%;
+  height: 10px;
+  padding: 10px;
+  box-shadow: 0 0 5px 5px #888;
+  background: #fff;
+  margin: 10px;
+}
+.createaccount #button{
+  border-radius: 10px;
+  font-size: 20px;
+  background: #F7F7F2;
+  margin: 10px;
+  font-size: 1.2em;
+  height: 50px;
+}
+
+/*Profile CSS*/
+
+
+#profile_title {
+	color: white;
+	font-family: 'Saira Extra Condensed', sans-serif;
+	font-size: 30px;
+	text-align: center;
+
+}
+
+
+#page2 {
+	margin: 0 auto;
+	background-image: url("http://www.twitrcovers.com/wp-content/uploads/2013/02/Programming-Code-l.jpg");
+	background-repeat: repeat;
+	background-size: 100%;
+
+}
+
+
+#page2 .profile_display{
+  margin-right: 35px;
+}
+
+#page2 .profile_display img {
+	float:right;
+	border-radius: 50%;
+	height:300px;
+	width: 300px;
+  margin-right:
+}
+
+
+
+#username1 {
+	color:white;
+	font-family: 'Saira Extra Condensed', sans-serif;
+	font-size: 30px;
+	float: right;
+	margin-bottom: 30px;
+	margin-right: 0px;
+  clear: both;
+	/*text-align: center;*/
+	/*padding-left: 0px;*/
+
+}
+
+
+
+#page2 input[type="text"], input[type="topic"], input[type="url"], input[type="description"], input[type="file"] {
+	height: 32px;
+	width: 350px;
+	font-family: 'Saira Extra Condensed', sans-serif;
+	font-size: 23px;
+	border: none;
+	margin-bottom: 10px;
+	background-color: #fff;
+	padding-top: 0px;
+	padding-left: 10px;
+	text-align: left;
+
+}
+
+#page2 .profile-form-input {
+	width: 546px;
+	height: 430px;
+	text-align: center;
+	background-color: rgba(52, 73, 94,0.7);
+	border-radius: 40px;
+	margin-left: 10%;
+	margin-top: 50px;
+  margin-bottom: 30px;
+	padding: 20px;
+  padding-top: 30px;
+
+}
+
+
+
+#page2 .publish {
+	padding: 45px, 40px;
+	cursor: pointer;
+	color: #fff;
+	border-radius: 40px;
+	border: none;
+	background-color: #2ECC71;
+	height: 40px;
+	width: 90px;
+	font-family: 'Saira Extra Condensed', sans-serif;
+	font-size: 25px;
+	margin-bottom: 15px;
+	text-align: center;
+
+}
+
+
+
+
+/*END PROFILE CSS*/
+
+
+/*Bottom*/
+.last {
+  height: 73px;
+  background-color: #031926;
+}
+footer {
+  height: 100px;
+  background-color: #FDE3A7;
+}
+#footer_text {
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
