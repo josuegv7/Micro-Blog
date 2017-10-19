@@ -8,18 +8,18 @@
     <h2 id="username1"><%=@current_user.username%></h2>
   </div>
 
-  <form>
+  <form action"/profile" method="post" name ="/sources">
+
     <div class="profile-form-input">
+      <input type="text" name="title" placeholder="Blog Post Title"><br>
 
-      <input type="text" name="Title" placeholder="Blog Post Title"><br>
+      <input type="text" name="theme" placeholder="Topic"><br>
 
-      <input type="text" name="topic" placeholder="Topic"><br>
+      <input type="url" name="link" placeholder="URL"><br>
 
-      <input type="url" name="url" placeholder="URL"><br>
+      <input type="text" name="image" placeholder="Image URL"><br>
 
-      <input type="text" name="imagefile" placeholder="Image URL"><br>
-
-      <input type="text" name="topic" placeholder="Enter Short Description"><br>
+      <input type="text" name="text" placeholder="Enter Short Description"><br>
 
       <input type="submit" name="submit" value="Publish" class="publish">
       <br>

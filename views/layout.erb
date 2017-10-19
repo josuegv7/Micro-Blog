@@ -25,6 +25,9 @@
               <a href="/feed" class="nav-item">Feed</a>
               <a href="/signup" class="nav-item active">Sign up</a>
               <a href="" class="nav-item">Posts</a>
+              <% if @current_user %>
+              <a href="/logout">Log Out</a>
+              <% end %>
             </nav>
           </div>
         </header>
@@ -53,8 +56,6 @@
     </div>
     <!--closing container div-->
   </body>
-  <script src="main.js">
-
-  </script>
+  <script src="main.js"></script>
 
 </html>

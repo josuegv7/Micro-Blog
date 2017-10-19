@@ -12,11 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20171017025940) do
 
-  create_table "profiles", force: :cascade do |t|
-    t.string "username"
-    t.string "posts"
-  end
-
   create_table "sources", force: :cascade do |t|
     t.string "title"
     t.string "link"
@@ -24,6 +19,8 @@ ActiveRecord::Schema.define(version: 20171017025940) do
     t.string "image"
     t.string "text"
     t.string "theme"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_sources_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

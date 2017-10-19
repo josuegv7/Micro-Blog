@@ -17,11 +17,7 @@ class Resource < ActiveRecord::Migration[5.1]
       t.string :image
       t.string :text
       t.string :theme
-    end
-
-    create_table :profiles do |t|
-      t.string :username
-      t.string :posts
+      t.references :user, foreign_key: {to_table: :users}, index: true
     end
   end
 end
