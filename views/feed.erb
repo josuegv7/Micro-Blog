@@ -1,124 +1,271 @@
 
-  <!--open row 2  -->
-  <div class="row">
-    <div class="hero-image">
-      <p class = "hero-image-background"> MY FEED </p>
+
+<!-- Open row 5 (3,3,3,3) -->
+
+<div class="row">
+  <div class="row5">
+    <div class="three left">
+      <% @sources.each do |source| %>
+      <div class="feed">
+        <div class="feed-header">
+          <a class="feed-author-name" href="http://blog.stackpie.com"><%=source.title %></a>
+          <a class="feed-time">3h</a>
+        </div>
+        <div class="feed-image">
+          <img src="<%=source.image%>"/>
+        </div>
+        <div class="feed-body"><%=source.text %></div>
+        <div class="feed-footer">
+          <i class="fa fa-heart-o nx"></i>
+          <input type="text" class="ny" placeholder="Add a comment..."/>
+          <i class="fa fa-sort-down nz"></i>
+        </div>
+      </div>
+      <% end %>
+
     </div>
-  </div>
-  <!--closing row 2-->
+    <!--closing column 3-->
 
-
-  <!-- Row 3  (6,3,3 )-->
-  <div class="row">
-    <div class="row3">
-      <div class="six left">
-        <span>title</span><br>
-        <span>text</span><br>
-        <span>URL</span>
+    <div class="three middle1">
+      <% @sources.each do |source| %>
+      <div class="feed">
+        <div class="feed-header">
+          <a class="feed-author-name" href="http://blog.stackpie.com"><%=source.title %></a>
+          <a class="feed-time">3h</a>
+        </div>
+        <div class="feed-image">
+          <img src="<%=source.image%>"/>
+        </div>
+        <div class="feed-body"><%=source.text %></div>
+        <div class="feed-footer">
+          <i class="fa fa-heart-o nx"></i>
+          <input type="text" class="ny" placeholder="Add a comment..."/>
+          <i class="fa fa-sort-down nz"></i>
+        </div>
       </div>
-      <!--closing column 6-->
-
-      <div class="three middle">
-        <span>title</span><br>
-        <span>text</span><br>
-        <span>URL</span>
-      </div>
-      <!--closing column 3-->
-
-      <div class=" three right">
-        <span>title</span><br>
-        <span>text</span><br>
-        <span>URL</span>
-      </div>
-      <!--closing column 3-->
+      <% end %>
     </div>
-  </div>
-  <!--closing row 3-->
+    <!--closing column 3-->
 
-  <!-- row 4 (3,6,3)-->
-  <div class="row">
-    <div class="row4">
-
-      <div class="three left">
-        <span>title</span><br>
-        <span>text</span><br>
-        <span>URL</span>
+    <div class="three middle2">
+      <% @sources.each do |source| %>
+      <div class="feed">
+        <div class="feed-header">
+          <a class="feed-author-name" href="http://blog.stackpie.com"><%=source.title %></a>
+          <a class="feed-time">3h</a>
+        </div>
+        <div class="feed-image">
+          <img src="<%=source.image%>"/>
+        </div>
+        <div class="feed-body"><%=source.text %></div>
+        <div class="feed-footer">
+          <i class="fa fa-heart-o nx"></i>
+          <input type="text" class="ny" placeholder="Add a comment..."/>
+          <i class="fa fa-sort-down nz"></i>
+        </div>
       </div>
-      <!--closing column 3-->
-
-      <div class="six middle">
-        <span>title</span><br>
-        <span>text</span><br>
-        <span>URL</span>
-      </div>
-      <!--closing column 6-->
-
-      <div class="three right">
-        <span>title</span><br>
-        <span>text</span><br>
-        <span>URL</span>
-      </div>
-      <!--closing column 3-->
+      <% end %>
     </div>
-  </div>
-  <!--closing row 4-->
+    <!--closing column 3-->
 
-  <!-- Open row 5 (3,3,3,3) -->
-  <div class="row">
-    <div class="row5">
-      <div class="three left">
-        <span>title</span><br>
-        <span>text</span><br>
-        <span>URL</span>
+    <div class="three right">
+      <% @sources.each do |source| %>
+      <div class="feed">
+        <div class="feed-header">
+          <a class="feed-author-name" href="http://blog.stackpie.com"><%=source.title %></a>
+          <a class="feed-time">3h</a>
+        </div>
+        <div class="feed-image">
+          <img src="<%=source.image%>"/>
+        </div>
+        <div class="feed-body"><%=source.text %></div>
+        <div class="feed-footer">
+          <i class="fa fa-heart-o nx"></i>
+          <input type="text" class="ny" placeholder="Add a comment..."/>
+          <i class="fa fa-sort-down nz"></i>
+        </div>
       </div>
-      <!--closing column 3-->
-
-      <div class="three middle1">
-        <span>title</span><br>
-        <span>text</span><br>
-        <span>URL</span>
-      </div>
-      <!--closing column 3-->
-
-      <div class="three middle2">
-        <span>title</span><br>
-        <span>text</span><br>
-        <span>URL</span>
-      </div>
-      <!--closing column 3-->
-
-      <div class="three right">
-        <span>title</span><br>
-        <span>text</span><br>
-        <span>URL</span>
-      </div>
-      <!--closing column 3-->
+      <% end %>
     </div>
+    <!--closing column 3-->
   </div>
-  <!-- Close row 5 (3,3,3,3) -->
+</div>
+<!-- Close row 5 (3,3,3,3) -->
 
+<!-- Open row 5 (3,3,3,3) -->
+<div class="row">
+  <div class="row5">
+    <div class="three left">
+      <% @sources.each do |source| %>
+      <div class="feed">
+        <div class="feed-header">
+          <a class="feed-author-name" href="http://blog.stackpie.com"><%=source.title %></a>
+          <a class="feed-time">3h</a>
+        </div>
+        <div class="feed-image">
+          <img src="<%=source.image%>"/>
+        </div>
+        <div class="feed-body"><%=source.text %></div>
+        <div class="feed-footer">
+          <i class="fa fa-heart-o nx"></i>
+          <input type="text" class="ny" placeholder="Add a comment..."/>
+          <i class="fa fa-sort-down nz"></i>
+        </div>
+      </div>
+      <% end %>
 
-  <!--open row 6 -->
-  <div class="row">
-    <div class="row6">
-      <div class="three left">
-          <span>title</span><br>
-          <span>text</span><br>
-          <span>URL</span>
-      </div>
-      <!--closing column 6-->
-      <div class="three middle">
-        <span>title</span><br>
-        <span>text</span><br>
-        <span>URL</span>
-      </div>
-      <!--closing column 3-->
-      <div class="six right">
-        <span>title</span><br>
-        <span>text</span><br>
-        <span>URL</span>
-      </div>
-      <!--closing column 3-->
     </div>
+    <!--closing column 3-->
+    <div class="three middle1">
+      <% @sources.each do |source| %>
+      <div class="feed">
+        <div class="feed-header">
+          <a class="feed-author-name" href="http://blog.stackpie.com"><%=source.title %></a>
+          <a class="feed-time">3h</a>
+        </div>
+        <div class="feed-image">
+          <img src="<%=source.image%>"/>
+        </div>
+        <div class="feed-body"><%=source.text %></div>
+        <div class="feed-footer">
+          <i class="fa fa-heart-o nx"></i>
+          <input type="text" class="ny" placeholder="Add a comment..."/>
+          <i class="fa fa-sort-down nz"></i>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <!--closing column 3-->
+    <div class="three middle2">
+      <% @sources.each do |source| %>
+      <div class="feed">
+        <div class="feed-header">
+          <a class="feed-author-name" href="http://blog.stackpie.com"><%=source.title %></a>
+          <a class="feed-time">3h</a>
+        </div>
+        <div class="feed-image">
+          <img src="<%=source.image%>"/>
+        </div>
+        <div class="feed-body"><%=source.text %></div>
+        <div class="feed-footer">
+          <i class="fa fa-heart-o nx"></i>
+          <input type="text" class="ny" placeholder="Add a comment..."/>
+          <i class="fa fa-sort-down nz"></i>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <!--closing column 3-->
+
+    <div class="three right">
+      <% @sources.each do |source| %>
+      <div class="feed">
+        <div class="feed-header">
+          <a class="feed-author-name" href="http://blog.stackpie.com"><%=source.title %></a>
+          <a class="feed-time">3h</a>
+        </div>
+        <div class="feed-image">
+          <img src="<%=source.image%>"/>
+        </div>
+        <div class="feed-body"><%=source.text %></div>
+        <div class="feed-footer">
+          <i class="fa fa-heart-o nx"></i>
+          <input type="text" class="ny" placeholder="Add a comment..."/>
+          <i class="fa fa-sort-down nz"></i>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <!--closing column 3-->
   </div>
-  <!--closing row 6-->
+</div>
+<!-- Close row 5 (3,3,3,3) -->
+
+<!-- Open row 5 (3,3,3,3) -->
+<div class="row">
+  <div class="row5">
+    <div class="three left">
+      <% @sources.each do |source| %>
+      <div class="feed">
+        <div class="feed-header">
+          <a class="feed-author-name" href="http://blog.stackpie.com"><%=source.title %></a>
+          <a class="feed-time">3h</a>
+        </div>
+        <div class="feed-image">
+          <img src="<%=source.image%>"/>
+        </div>
+        <div class="feed-body"><%=source.text %></div>
+        <div class="feed-footer">
+          <i class="fa fa-heart-o nx"></i>
+          <input type="text" class="ny" placeholder="Add a comment..."/>
+          <i class="fa fa-sort-down nz"></i>
+        </div>
+      </div>
+      <!-- <% end %> -->
+    </div>
+    <!--closing column 3-->
+
+    <div class="three middle1">
+      <!-- <% @sources.each do |source| %> -->
+      <div class="feed">
+        <div class="feed-header">
+          <a class="feed-author-name" href="http://blog.stackpie.com"><%=source.title %></a>
+          <a class="feed-time">3h</a>
+        </div>
+        <div class="feed-image">
+          <img src="<%=source.image%>"/>
+        </div>
+        <div class="feed-body"><%=source.text %></div>
+        <div class="feed-footer">
+          <i class="fa fa-heart-o nx"></i>
+          <input type="text" class="ny" placeholder="Add a comment..."/>
+          <i class="fa fa-sort-down nz"></i>
+        </div>
+      </div>
+    <% end %>
+    </div>
+    <!--closing column 3-->
+
+    <div class="three middle2">
+      <% @sources.each do |source| %>
+      <div class="feed">
+        <div class="feed-header">
+          <a class="feed-author-name" href="http://blog.stackpie.com"><%=source.title %></a>
+          <a class="feed-time">3h</a>
+        </div>
+        <div class="feed-image">
+          <img src="<%=source.image%>"/>
+        </div>
+        <div class="feed-body"><%=source.text %></div>
+        <div class="feed-footer">
+          <i class="fa fa-heart-o nx"></i>
+          <input type="text" class="ny" placeholder="Add a comment..."/>
+          <i class="fa fa-sort-down nz"></i>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <!--closing column 3-->
+    <div class="three right">
+      <% @sources.each do |source| %>
+      <div class="feed">
+        <div class="feed-header">
+          <a class="feed-author-name" href="http://blog.stackpie.com"><%=source.title %></a>
+          <a class="feed-time">3h</a>
+        </div>
+        <div class="feed-image">
+          <img src="<%=source.image%>"/>
+        </div>
+        <div class="feed-body"><%=source.text %></div>
+        <div class="feed-footer">
+          <i class="fa fa-heart-o nx"></i>
+          <input type="text" class="ny" placeholder="Add a comment..."/>
+          <i class="fa fa-sort-down nz"></i>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <!--closing column 3-->
+  </div>
+</div>
+<!-- Close (3,3,3,3) -->

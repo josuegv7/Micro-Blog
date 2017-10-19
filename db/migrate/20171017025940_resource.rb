@@ -7,6 +7,7 @@ class Resource < ActiveRecord::Migration[5.1]
       t.string :email
       t.string :username
       t.string :password
+      t.string :profilepic
     end
 
     create_table :sources do |t|
@@ -21,7 +22,6 @@ class Resource < ActiveRecord::Migration[5.1]
     create_table :profiles do |t|
       t.string :username
       t.string :posts
-      t.string :likes
     end
   end
 end

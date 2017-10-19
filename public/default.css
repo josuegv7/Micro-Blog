@@ -136,198 +136,111 @@ a {
 	font-size: 15px;
 	color: black;
 }
+/* #####place old css for feed page below this point*/
 
-/*-------------------FEED CSS-------------------------------*/
-/* Setting up our grid */
-/*Text in posts*/
-span{
-  margin: auto;
-  text-align: center;
-  bottom: 0;
+.feeds {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  /* justify-content: center; */
+}
+
+.feed-imagediv {
+  #feed-pic {
+    max-width: 100px;
+  }
+}
+ #feed_pic{
+   width: 312px;
+   height: 312px;
+ }
+
+.feed {
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  width: 500px;
+  margin: .5em;
+  align-self: center;
+  flex-basis: 450px;
+}
+
+.feed-header {
+  display: flex;
+  padding: 1em;
+  align-items: baseline;
+
+
+  .feed-author-name {
+    color: #444;
+    flex-grow: 1;
+    margin: .5em;
+    text-decoration: none;
+  }
+
+  .feed-time {
+    color: #ddd;
+    text-decoration: none;
+  }
+}
+
+.feed-body {
+  padding: 1.5em;
+  white-space: normal;
+}
+
+.feed-footer {
+  display: flex;
+  border-top: 1px solid #eee;
+  margin: 0 1.5em 0 1.5em ;
+  padding: 1em 0 1em 0;
+  align-items: center;
+}
+
+.ny {
+  /* input box */
+  border: 0px;
+  outline: none;
+  font-family: 'Lato', san-serif;
+  margin: .5em;
+  flex-grow: 1;
+}
+.nx, .nz, .mx {
+  color: #ddd;
   font-size: 1.5em;
-  position: relative;
+  cursor: pointer;
 }
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
+.nz {
+  align-self: flex-start;
+  margin-top: 0.2em;
 }
-
-.seven:first-child, .eight:first-child, .nine:first-child, .ten:first-child, .eleven:first-child, .five:first-child, .four:first-child, .three:first-child, .two:first-child, .one:first-child, .six:first-child {
-  margin-left: 0;
+.mx {
+  color: red;
 }
-
-
-/*HERO IMAGE  Row 2*/
-.hero-image {
-  width: 100%;
-  height: 200px;
-  background:#919992;
-  margin: auto;
-  margin-top: 10px;
-}
-.hero-image-background {
-  margin: auto;
-  text-align: center;
-  top: 50%;
-  font-size: 4.5em;
-  position: relative;
-}
-/*-----------Close Hero Image----------*/
-.six {
-  width: 49%;
-  /* This div spans six columns (the entire row)*/
-  float: left;
-  margin-left: 2%;
-}
-.five {
-  width: 40.5%;
-  /* This div spans five columns */
-  margin-left: 2%;
-  float: left;
-}
-.four {
-  width: 32%;
-  float: left;
-  margin-left: 2%;
+.feed-author-img {
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+  }
 }
 
-.three {
-  width: 23.5%;
-  float: left;
-  margin-left: 2%;
-}
-.two {
-  width: 15%;
-  float: left;
-  margin-left: 2%;
-}
-
-.one {
-  width: 6.5%;
-  float: left;
-  margin-left: 2%;
-}
-.row {
-  width: 100%;
-  clear: both;
-  Clear creates new styles for the next row
-  padding: 0px;
-  margin: 0px;
-}
-
-/*Open Row 3 (6,3,3 )--------------------------*/
-.row3 .six, .row3 .three {
-  height: 333px;
-  background-color: #F89406;
-}
-/*6 left*/
-.row3 .left {
-  background: url('https://images.pexels.com/photos/7375/startup-photos.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb') no-repeat center center ;
-  background-size: cover;
-}
-/*3 middle*/
-.row3 .middle {
-  background: #728779;
-}
-/*3 right*/
-.row3 .right {
-  background: url('https://images.pexels.com/photos/249798/pexels-photo-249798.png?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb') no-repeat center center ;
-  background-size: cover;
-}
-/*Closing Row 3 (6,3,3 )----------------------------*/
-
-/* Open Row 4(3,6,3)---------------*/
-.row4 .six, .row4 .three {
-  height: 333px;
-  background-color: #F9690E;
-}
-/*3 left*/
-.row4 .left {
-  background: #728779;
-}
-/*6 middle*/
-.row4 .middle {
-  background: url('https://images.pexels.com/photos/36990/pexels-photo.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb') no-repeat center center ;
-  background-size: cover;
-}
-/*3 right*/
-.row4 .right {
-  background: #728779;
-}
-/*------------------------ Closing Row 4 (3,6,3)---------------*/
-
-
-/* -----------------------Open  Row 5 (3,3,3, 3)---------------*/
-.row5 .six, .row5 .three {
-  height: 333px;
-  background-color: #FDE3A7;
-}
-/*3 left*/
-.row5 .left {
-  background: #728779;
-}
-/*3 middle1*/
-
-.row5 .middle1 {
-  background: url('https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb') no-repeat center center ;
-  background-size: cover;
-}
-/*3 middle2*/
-.row5 .middle2 {
-  background: url('https://static.pexels.com/photos/398077/pexels-photo-398077.jpeg') no-repeat center center ;
-  background-size: cover;
-}
-/*3 right*/
-.row5 .right {
-  background: #728779;
-}
-/*------------------------ Close Row 5(3,3,3, 3)---------------*/
-
-/*-------------------Open Row 6 row-------------------------*/
-
-.row6 .six, .row6 .three {
-  height: 333px;
-  background-color: #728779;
-}
-
-.row6 .left {
-  background: #728779;
-}
-
-.row6 .middle {
-  background: #728779;
-}
-
-.row6 .right {
-  background: url('https://images.pexels.com/photos/7375/startup-photos.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb') no-repeat center center;
-  background-size: cover;
-}
-
-/*-------------------Close Row 6 row--------------------------*/
-
-
-.row3, .row4, .row5, .row6 {
-  padding-top: 30px;
-}
-
-/*-------------------FEED CSS CLOSING----------------------------*/
-
-
-/*---------------------SIGN UP CSS-------------------------------*/
+/*place old feed css above this point*/
+/*-=============SIGN UP CSS-=========================-*/
 .createaccount{
   margin: auto;
   margin-top: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   width: 45%;
-  height: 350px;
+  height: 445px;
   padding: 50px;
   text-align: center;
   background:#919992;
   opacity: .8;
   border-radius: 10px;
 }
-
 .createaccount label{
   text-align: left;
   font-size: 1em;
@@ -349,71 +262,50 @@ span{
   font-size: 1.2em;
   height: 50px;
 }
-
-/*Profile CSS*/
-
-
+/*==========Profile CSS==================*/
 #profile_title {
-	color: white;
-	font-family: 'Saira Extra Condensed', sans-serif;
-	font-size: 30px;
+	color: black;
+  font-family: 'Montserrat', sans-serif;
+	font-size: 25px;
 	text-align: center;
-
 }
-
-
 #page2 {
 	margin: 0 auto;
-	background-image: url("http://www.twitrcovers.com/wp-content/uploads/2013/02/Programming-Code-l.jpg");
 	background-repeat: repeat;
 	background-size: 100%;
-
 }
-
-
 #page2 .profile_display{
   margin-right: 35px;
 }
-
 #page2 .profile_display img {
 	float:right;
 	border-radius: 50%;
 	height:300px;
 	width: 300px;
-  margin-right:
+  margin-right:30px,
 }
-
-
-
 #username1 {
-	color:white;
-	font-family: 'Saira Extra Condensed', sans-serif;
+	color:black;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 30px;
 	float: right;
 	margin-bottom: 30px;
-	margin-right: 0px;
+	margin-right: 50px;
   clear: both;
-	/*text-align: center;*/
-	/*padding-left: 0px;*/
-
 }
-
-
-
 #page2 input[type="text"], input[type="topic"], input[type="url"], input[type="description"], input[type="file"] {
 	height: 32px;
 	width: 350px;
-	font-family: 'Saira Extra Condensed', sans-serif;
-	font-size: 23px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
 	border: none;
 	margin-bottom: 10px;
 	background-color: #fff;
 	padding-top: 0px;
 	padding-left: 10px;
 	text-align: left;
-
+  margin-top: 30px;
 }
-
 #page2 .profile-form-input {
 	width: 546px;
 	height: 430px;
@@ -427,9 +319,6 @@ span{
   padding-top: 30px;
 
 }
-
-
-
 #page2 .publish {
 	padding: 45px, 40px;
 	cursor: pointer;
@@ -438,17 +327,12 @@ span{
 	border: none;
 	background-color: #2ECC71;
 	height: 40px;
-	width: 90px;
-	font-family: 'Saira Extra Condensed', sans-serif;
+	width: 120px;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 25px;
 	margin-bottom: 15px;
 	text-align: center;
-
 }
-
-
-
-
 /*END PROFILE CSS*/
 
 

@@ -2,6 +2,9 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/flash'
 require 'sqlite3'
+require 'carrierwave'
+require 'carrierwave/orm/activerecord'
+require 'mini_magick'
 require './models'
 
 enable :sessions
@@ -9,25 +12,29 @@ set :database, {adapter: 'sqlite3', database: 'resource.sqlite3'}
 
 before do
   current_user
+  @class = ""
 end
+
 
 # HOME
 get '/' do
   erb :login
 end
-
-# signup
+# Signup
 get '/signup' do
   erb :signup
 end
-
 # profile
 get '/profile' do
+  @class = "profile"
+  @user = User.all
   erb :profile
 end
 
-# feed
+# Feed
 get '/feed' do
+    @sources = Source.all
+    @user = User.all
   erb :feed
 end
 
@@ -39,7 +46,7 @@ post '/' do
     flash[:message] = "Welcome Back!!"
     redirect '/profile'
   else
-    flash[:message] = "Ooops, did you forget your account information?  I don't recognize that user/pass combo."
+    flash[:message] = "Did you forget your account information?"
   end
 end
 
@@ -55,7 +62,6 @@ post '/users' do
   user.save
     redirect '/'
 end
-
 
 # Add Post
 post '/sources' do

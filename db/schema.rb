@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20171017025940) do
   create_table "profiles", force: :cascade do |t|
     t.string "username"
     t.string "posts"
-    t.string "likes"
   end
 
   create_table "sources", force: :cascade do |t|
@@ -33,6 +32,7 @@ ActiveRecord::Schema.define(version: 20171017025940) do
     t.string "email"
     t.string "username"
     t.string "password"
+    t.string "profilepic"
   end
 
 end
