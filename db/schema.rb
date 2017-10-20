@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20171017025940) do
     t.string "image"
     t.string "text"
     t.string "theme"
+    t.datetime "posttime"
     t.integer "user_id"
     t.index ["user_id"], name: "index_sources_on_user_id"
   end

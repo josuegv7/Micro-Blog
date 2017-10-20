@@ -12,20 +12,20 @@ body {
 	font-weight: bold;
 	padding: 15px 50px;
 }
-
 /*END FALSH MESSAGE*/
 
+/*=================Navigation===================*/
 /*Navigation===================*/
 .sidebar {
-  background: #031926;
+  background: #8B3296;
   flex: 1 3 20%;
   min-width: 300px;
-  padding: 4em;
+  padding: 0em;
 }
 .logo {
   text-transform: uppercase;
   margin-bottom: 2em;
-  color: #F9F8F8;
+  color: DarkGrey;
   @media (min-width: 1500px) {
     margin-bottom: 5em;
   }
@@ -34,163 +34,175 @@ body {
   }
 }
 .nav-item {
-  color: #F9F8F8;
+  color: DarkGrey;
   text-decoration: none;
   font-size: 1.7rem;
   display: inline-block;
   margin-right: 2em;
   @media (min-width: 1500px) {
     display: block;
-    margin: 7vh 0;
+    margin: 5vh 0;
   }
   &.active {
     color: #F9F8F8;
   }
 }
+.nav-item-special {
+  color: DarkGrey;
+  text-decoration: none;
+  font-size: 1.7rem;
+  float: right;
+
+}
 /*Navigation End*/
+/*==========Navigation End=============*/
 
-
-/*LOGIN CSS*/
+/*============LOGIN CSS===============*/
+#login_bg {
+  margin: 0 auto;
+  background-image: url("https://www.thirdwavedigital.com/img/web/coding-and-programming.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 .login-container{
-	width: 500px;
-	height: 400px;
-	text-align: center;
-	background-color: rgba(52, 73, 94,0.6);
-	border-radius: 4px;
-	margin: 0 auto;
-	margin-top: 70px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    background-color: rgba(52, 73, 94,0.6);
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 .login-container img{
-	width: 120px;
-	height: 140px;
-	margin-top: -60px;
-	margin-bottom: 30px;
-	border-radius: 50%;
+    width: 120px;
+    height: 140px;
+    margin-top: -60px;
+    margin-bottom: 30px;
+    border-radius: 50%;
 }
 .login-container input[type="text"], .login-container input[type="password"]{
-	height: 55px;
-	width: 200px;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 20px;
-	border: none;
-	margin-bottom: 20px;
-	background-color: #fff;
-	padding-top: 0px;
-	padding-left: 30px;
-	text-align: center;
+    height: 55px;
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding-top: 0px;
+    padding-left: 30px;
+    text-align: center;
 }
 .login-form-input::before{
-	content: "\f007";
-	position: absolute;
-	font-family: "FontAwesome";
+    content: "\f007";
+    position: absolute;
+    font-family: "FontAwesome";
   padding-left: 30px;
-	color: black;
-	padding-top: 9px;
-	font-size: 30px;
+    color: black;
+    padding-top: 9px;
+    font-size: 30px;
 }
 .login-form-input:nth-child(2)::before{
-	content: "\f023";
+    content: "\f023";
 }
 .btn-login{
-	padding: 15px, 30px;
-	cursor: pointer;
-	color: #fff;
-	border-radius: 40px;
-	border: none;
-	background-color: #2ECC71;
-	height: 60px;
-	width: 100px;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 25px;
-	margin-bottom: 15px;
+    padding: 15px, 30px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 40px;
+    border: none;
+    background-color: #2ECC71;
+    height: 60px;
+    width: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin-bottom: 15px;
 }
 a {
-	color: #fff;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 20px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
 }
 #login-social-media-icons {
  margin: auto;
  width: 15%;
  text-align: center;
  }
-
-/*Zip Code Header is .login-h1*/
-.login-h1{
-	text-align: center;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 30px;
-	color: black;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	top: 0;
+/*Zip Code Header is #login-h1*/
+#login-h1{
+  text-transform: uppercase;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: white;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    top: 0;
 }
 /* Login-h2 is blurb about everything the sight encompasses*/
 .login-h2{
-	padding-top: 0px;
-	padding-bottom: 0px;
-	text-align: center;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 15px;
-	color: black;
-}
-/* #####place old css for feed page below this point*/
+  color: Ivory;
+    padding-top: -10px;
+    padding-bottom: -10px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 
+}
+/* place old css for feed page below this point*/
+
+.feedstream{
+  margin: auto;
+  max-width: 100%;
+}
 .feeds {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  /* justify-content: center; */
+  justify-content: center;
 }
 
 .feed-image {
-  #feed-pic {
-    max-width: 100px;
-  }
+  margin: auto;
 }
  #feed_pic{
-   width: 312px;
+   margin: auto;
+   width: 320px;
    height: 312px;
+   margin-left: 16%;
  }
-
 .feed {
   border-radius: 3px;
   box-sizing: border-box;
   background-color: #fff;
   border: 1px solid #efefef;
   width: 500px;
-  margin: .5em;
+  margin: auto;
+  margin-top: 15px;
   align-self: center;
   flex-basis: 450px;
 }
-
 .feed-header {
   display: flex;
   padding: 1em;
   align-items: baseline;
-
-
-  .feed-author-name {
-    color: black;
-    flex-grow: 1;
-    margin: .5em;
-    text-decoration: none;
-  }
-
-  .feed-time {
-    color: black;
-    text-decoration: none;
-  }
 }
-
+.feed-author-name {
+  color: black;
+  flex-grow: 1;
+  margin: .5em;
+  text-decoration: none;
+  }
+.feed-time {
+  color: black;
+  text-decoration: none;
+}
 .feed-body {
   padding: 1.5em;
   white-space: normal;
 }
-
 .feed-footer {
   display: flex;
   border-top: 1px solid #eee;
@@ -198,7 +210,6 @@ a {
   padding: 1em 0 1em 0;
   align-items: center;
 }
-
 .ny {
   /* input box */
   border: 0px;
@@ -227,6 +238,7 @@ a {
   }
 }
 
+
 /*place old feed css above this point*/
 /*-=============SIGN UP CSS-=========================-*/
 .createaccount{
@@ -234,17 +246,27 @@ a {
   margin-top: 40px;
   margin-bottom: 30px;
   width: 45%;
-  height: 445px;
-  padding: 50px;
+  height: 450px;
+  padding: 10px;
   text-align: center;
-  background:#919992;
-  opacity: .8;
+  background:white;
+  opacity: .75;
   border-radius: 10px;
+  list-style-type: none;
+}
+ h3 {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: -40px;
+  color: white;
+  font-size: 3em;
+  text-align: center;
 }
 .createaccount label{
+ list-style-type: none;
   text-align: left;
-  font-size: 1em;
-  padding: 10px;
+  font-size: 1.5em;
+  padding: 5px;
 }
 .createaccount input{
   width: 30%;
@@ -256,11 +278,24 @@ a {
 }
 .createaccount #button{
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 10px;
   background: #F7F7F2;
-  margin: 10px;
+  margin: 5px;
   font-size: 1.2em;
-  height: 50px;
+  height: 40px;
+}
+.signup_bg{
+  height:600px;
+}
+#signup_bg1 .signup_bg {
+  margin: 0 auto;
+  margin-bottom: 0;
+  background-image: url("https://www.mindmeister.com/blog/wp-content/uploads/2014/11/creativity_fb_post_final.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  height: 600px;
 }
 /*==========Profile CSS==================*/
 #profile_title {
@@ -292,7 +327,19 @@ a {
 	margin-bottom: 30px;
 	margin-right: 50px;
   clear: both;
+
 }
+
+#delete_button{
+  float: right;
+  margin-top: 25%;
+  border-radius: 10px;
+  height: 40px;
+  background-color: red;
+  font-size: 20px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
 #page2 input[type="text"], input[type="topic"], input[type="url"], input[type="description"], input[type="file"] {
 	height: 32px;
 	width: 350px;
@@ -343,10 +390,11 @@ a {
 }
 footer {
   height: 100px;
-  background-color: #FDE3A7;
+  background-color: white;
+  text-align: center;
 }
 #footer_text {
-  margin-top: 20%;
+  margin-top: 5px;
   margin-left: auto;
   margin-right: auto;
 }

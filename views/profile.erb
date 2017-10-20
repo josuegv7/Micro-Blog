@@ -8,6 +8,13 @@
     <h2 id="username1"><%=@current_user.username%></h2>
   </div>
 
+  <!-- DELETE PROFILE -->
+  <form class="delete" action="/profile" method="post">
+        <input  id="delete_button" type="button" name="delete_account" value="Delete Account">
+  </form>
+
+
+
   <form action"/profile" method="post" name ="/sources">
 
     <div class="profile-form-input">

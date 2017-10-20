@@ -6,28 +6,31 @@
     <link rel="stylesheet" href="default.css">
     <!-- V -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+   <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
+
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Gallery -->
     <script src="https://use.fontawesome.com/2755c231b3.js"></script>
 
-    <title></title>
+   <title></title>
   </head>
   <body>
+  <div id="signup_bg1">
     <div class="container">
       <!--everything on the page-->
       <div class="row">
         <header>
           <div class="sidebar">
-            <div class="logo">ZipCode</div>
+            <!-- <div class="logo">ZIPCODE</div> -->
             <nav>
               <a href="/" class="nav-item">Login</a>
               <a href="/feed" class="nav-item">Feed</a>
               <a href="/signup" class="nav-item active">Sign up</a>
               <a href="" class="nav-item">Posts</a>
-              <% if @current_user %>
-              <a href="/logout">Log Out</a>
-              <% end %>
+              <a href="" class="nav-item-special">ZIPCODE</a>
             </nav>
           </div>
         </header>
@@ -36,14 +39,14 @@
       <div id="notice"><%= flash[:message] %></div>
       <% end %>
 
-      <%= yield %>
+     <%= yield %>
 
-      <!-- FOOTER/BOTTOM -->
+     <!-- FOOTER/BOTTOM -->
       <div class="row">
         <footer>
           <div>
-            <p id="footer_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p id="footer_text">Use of this site constitutes acceptance of our User Agreement and Privacy Policy. © 2017 ZIPCODE Inc. All rights reserved.
+ZIPCODE and the ZIPCODE Logo are registered trademarks of ZIPCODE Inc.</p>
           </div>
           <!--closing column 3-->
         </footer>
@@ -55,7 +58,10 @@
       <!--closing row 8-->
     </div>
     <!--closing container div-->
+  </div>
   </body>
-  <script src="main.js"></script>
+  <script src="main.js">
+
+ </script>
 
 </html>

@@ -4,7 +4,6 @@ require 'sinatra/flash'
 require 'sqlite3'
 require 'carrierwave'
 require 'carrierwave/orm/activerecord'
-require 'mini_magick'
 require './models'
 
 enable :sessions
@@ -33,19 +32,20 @@ get '/profile' do
   erb :profile
 end
 
-get '/sources' do
-  post = Source.new
-  erb :feed
-end
-
 # Feed
 get '/feed' do
     @sources = Source.all
-    # @user = User.all
+    # @sources = @current_user.sources
+    @user = User.all
   erb :feed
 end
 
-# Login Post:
+# get '/feed/:user_id' do
+#   @sources = User.find(params[:user_id]).sources
+#   erb :feed
+# end
+
+# Login:====================================
 post '/' do
   user = User.find_by(username: params[:username])
   if user && user.password == params[:password]
@@ -57,8 +57,8 @@ post '/' do
   end
   session[:user_id] = nil
 end
-
-# Sign Up Post
+#==================================
+# Sign Up:========================
 post '/users' do
   user = User.new(
     first: params[:first],
@@ -71,7 +71,10 @@ post '/users' do
     redirect '/profile'
 end
 
-# Add Post
+# Edit profile ==============
+
+
+# Add Post====================
 post '/profile' do
   post = Source.new(
     title: params[:title],
@@ -86,8 +89,20 @@ post '/profile' do
     redirect back
 end
 
+delete '/profile' do
+  @current_user.destroy
+	redirect '/'
+end
+
+#===== Delete action ==========
+delete '/profile' do
+  @current_user.sources.destroy
+  @current_user.users.destroy
+  redirect to '/login'
+end
 
 
+# ========Logout =======
 get '/logout' do
   session[:user_id] = nil
   flash[:message] = "Logged Out"
