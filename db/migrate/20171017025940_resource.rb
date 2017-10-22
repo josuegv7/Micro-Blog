@@ -13,12 +13,16 @@ class Resource < ActiveRecord::Migration[5.1]
     create_table :sources do |t|
       t.string :title
       t.string :link
-      t.string :rtype
       t.string :image
       t.string :text
       t.string :theme
-      t.datetime :posttime
+      t.datetime :created_at
       t.references :user, foreign_key: {to_table: :users}, index: true
+    end
+
+    create_table :comments do |t|
+      t.string :comment
+      t.references :source, foreign_key: {to_table: :sources}, index: true
     end
   end
 end

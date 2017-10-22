@@ -12,14 +12,19 @@
 
 ActiveRecord::Schema.define(version: 20171017025940) do
 
+  create_table "comments", force: :cascade do |t|
+    t.string "comment"
+    t.integer "source_id"
+    t.index ["source_id"], name: "index_comments_on_source_id"
+  end
+
   create_table "sources", force: :cascade do |t|
     t.string "title"
     t.string "link"
-    t.string "rtype"
     t.string "image"
     t.string "text"
     t.string "theme"
-    t.datetime "posttime"
+    t.datetime "created_at"
     t.integer "user_id"
     t.index ["user_id"], name: "index_sources_on_user_id"
   end

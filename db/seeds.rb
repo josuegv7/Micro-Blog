@@ -27,9 +27,13 @@ Source.create([
   { id: 3,
     title: "Learn 3",
     link: "http://designhooks.com/wp-content/uploads/2016/04/html5-and-css3.png",
-    rtype: "website",
     image: "http://designhooks.com/wp-content/uploads/2016/04/html5-and-css3.png",
     text: "Learn how to create websites by structuring and styling your pages with HTML and CSS.",
     theme: "CS"
   }
+  ])
+
+Comment.create([
+  {id: 1, comment: "GREAT"},
+  {id: 2, comment: "Thanks"}
   ])

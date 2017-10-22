@@ -4,6 +4,11 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+#editprofile{
+  color: black
+
+}
+
 /*FLASH MESSAGE*/
 #notice {
   text-align: center;
@@ -180,7 +185,7 @@ a {
   border: 1px solid #efefef;
   width: 500px;
   margin: auto;
-  margin-top: 15px;
+  margin-top: 20px;
   align-self: center;
   flex-basis: 450px;
 }
@@ -188,6 +193,7 @@ a {
   display: flex;
   padding: 1em;
   align-items: baseline;
+  
 }
 .feed-author-name {
   color: black;
@@ -210,14 +216,22 @@ a {
   padding: 1em 0 1em 0;
   align-items: center;
 }
-.ny {
+#comment {
   /* input box */
   border: 0px;
   outline: none;
   font-family: 'Lato', san-serif;
   margin: .5em;
   flex-grow: 1;
+  font-size: 14px;
+  padding-left: 20px;
 }
+
+#button2 {
+  float: right;
+  margin-right: 27px;
+}
+
 .nx, .nz, .mx {
   color: #ddd;
   font-size: 1.5em;

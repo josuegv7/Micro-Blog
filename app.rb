@@ -9,15 +9,20 @@ require './models'
 enable :sessions
 set :database, {adapter: 'sqlite3', database: 'resource.sqlite3'}
 
+
+# Will set a session number for the current_user
 before do
   current_user
   @class = ""
 end
+
+# Wont allow acess to these pages unless signed in.
 before ["/feed","/profile"] do
   redirect "/" unless @current_user
 end
 
-# HOME
+# Getting all the pages:
+# Home
 get '/' do
   erb :login
 end
@@ -27,17 +32,29 @@ get '/signup' do
 end
 # Profile
 get '/profile' do
-  @class = "profile"
+  # @class = "profile"
   @user = User.all
   erb :profile
 end
-
+# Edit profile
+get '/editprofile' do
+  @user = @current_user
+  erb :editprofile
+end
 # Feed
 get '/feed' do
-    @sources = Source.all
-    # @sources = @current_user.sources
-    @user = User.all
+    # @sources = Source.all
+    @sources = @current_user.sources
+    @comment = Comment.all
+    # @user = User.all
   erb :feed
+end
+# Public Feed
+get '/publicfeed' do
+    @sources = Source.all
+    @user = User.all
+    @comment = Comment.all
+  erb :publicfeed
 end
 
 # get '/feed/:user_id' do
@@ -45,69 +62,87 @@ end
 #   erb :feed
 # end
 
-# Login:====================================
+# Login: Checks the login info to database and creats a session
 post '/' do
   user = User.find_by(username: params[:username])
   if user && user.password == params[:password]
     session[:user_id] = user.id
-    flash[:message] = "Welcome Back!!"
+    flash[:message] = "Welcome!"
     redirect '/profile'
   else
-    flash[:message] = "Did you forget your account information?"
+    flash[:message] = "Wrong account information"
   end
   session[:user_id] = nil
 end
 #==================================
-# Sign Up:========================
+# ===Logout==========
+get '/logout' do
+  session[:user_id] = nil
+  flash[:message] = "Logged Out"
+  redirect '/'
+end
+
+# ============
+
+# Sign Up: create new user to the database
 post '/users' do
-  user = User.new(
+  @user = User.new(
     first: params[:first],
     last: params[:last],
     email: params[:email],
     username: params[:username],
     password: params[:password]
   )
-  user.save
+  @user.save
     redirect '/profile'
 end
+# ========================
+# Edit profile: update information for a current user
+post '/useredit' do
+  @current_user.update(
+      first: params[:first],
+      last: params[:last],
+      email: params[:email],
+      username: params[:username],
+      password: params[:password]
+  )
+    redirect '/profile'
+end
+# ================================
 
-# Edit profile ==============
-
-
-# Add Post====================
+# Add Post to feed page ==========
 post '/profile' do
-  post = Source.new(
+  @post = Source.new(
     title: params[:title],
     link: params[:link],
-    rtype: params[:rtype],
     image: params[:image],
     text: params[:text],
     theme: params[:theme],
     user_id: @current_user.id
   )
-  post.save
+  @post.save
     redirect back
 end
 
-delete '/profile' do
-  @current_user.destroy
-	redirect '/'
+# Add comment to a post on the feed:
+post '/addcomment' do
+  @comment = Comment.new(
+    comment: params[:comment]
+  )
+  @comment.save
+  redirect back
 end
+# ===========================
 
 #===== Delete action ==========
-delete '/profile' do
-  @current_user.sources.destroy
-  @current_user.users.destroy
+delete '/profile/:id' do
+  user = User.find(params[:id])
+  user.profile.destroy
+  session[:user_id]=nil
   redirect to '/login'
 end
 
-
-# ========Logout =======
-get '/logout' do
-  session[:user_id] = nil
-  flash[:message] = "Logged Out"
-  redirect '/'
-end
+# ===================
 
 def current_user
   @current_user = User.find(session[:user_id]) if session[:user_id]

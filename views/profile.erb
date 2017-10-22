@@ -8,15 +8,14 @@
     <h2 id="username1"><%=@current_user.username%></h2>
   </div>
 
-  <!-- DELETE PROFILE -->
+  <!-- DELETE PROFILE Button OPEN-->
   <form class="delete" action="/profile" method="post">
-        <input  id="delete_button" type="button" name="delete_account" value="Delete Account">
+    <input id="delete_button" type="button" name="delete_account" value="Delete Account">
   </form>
+  <!-- DELETE PROFILE Button CLOSE  -->
 
-
-
-  <form action"/profile" method="post" name ="/sources">
-
+  <!--Form to add a post to feed page-->
+  <form action"/profile" method="post" name="/sources">
     <div class="profile-form-input">
       <input type="text" name="title" placeholder="Blog Post Title"><br>
 
@@ -31,5 +30,4 @@
       <input type="submit" name="submit" value="Publish" class="publish">
       <br>
     </div>
-
   </form>
