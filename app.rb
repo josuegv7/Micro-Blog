@@ -135,9 +135,9 @@ end
 # ===========================
 
 #===== Delete action ==========
-delete '/profile/:id' do
-  user = User.find(params[:id])
-  user.profile.destroy
+post '/userprofile' do
+  user = @current_user
+  user.destroy
   session[:user_id]=nil
   redirect to '/login'
 end

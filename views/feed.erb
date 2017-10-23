@@ -13,7 +13,7 @@
           <img id="feed_pic" src="<%=source.image%>"/></a>
         </div>
         <div class="feed-body"><%= source.text %></div>
-        <!-- maybe here -->
+        <!--maybe here  -->
 
         <!-- Input comments -->
         <div class="commentinput">
@@ -27,15 +27,17 @@
           <% @comment.each do |comment| %>
           <div class="commentdiv">
             <div class="comments" style="width:100%"><br>
-              <span>
-                <i class="fa fa-heart-o nx"></i>
-              </span><%= comment.comment %><br>
-            </div><br>
+
+              <span><i class="fa fa-heart-o nx"></i></span>
+
+                <%= comment.comment %>
+
+            </div>
           </div>
           <% end %>
         </div>
       </div>
-    <% end %>
+      <% end %>
       <!-- put end here maybe -->
     </div>
   </div>

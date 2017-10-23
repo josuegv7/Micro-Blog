@@ -157,6 +157,14 @@ a {
 }
 /* place old css for feed page below this point*/
 
+.feedstream .row1 .three {
+  background-image: url("https://warroom.securestate.com/wp-content/uploads/2016/10/coding.jpg");
+  margin-top: -5px;
+  margin: 0 auto;
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
 .feedstream{
   margin: auto;
   max-width: 100%;
@@ -193,7 +201,7 @@ a {
   display: flex;
   padding: 1em;
   align-items: baseline;
-  
+
 }
 .feed-author-name {
   color: black;
@@ -216,6 +224,12 @@ a {
   padding: 1em 0 1em 0;
   align-items: center;
 }
+
+.commentdiv{
+  max-width: 100%;
+  display: block;
+}
+
 #comment {
   /* input box */
   border: 0px;
@@ -225,6 +239,7 @@ a {
   flex-grow: 1;
   font-size: 14px;
   padding-left: 20px;
+  display: block;
 }
 
 #button2 {
